@@ -11,6 +11,7 @@ import {
   SafeAreaView,
   TextInput,
   Pressable,
+  TouchableOpacity,
 } from "react-native";
 
 import burga from "./assets/burga.png";
@@ -18,8 +19,11 @@ import fondo from "./assets/fondo.png";
 
 
 export default function App() {
-  const [hamburguesa, handleHamburguesaFav] = React.useState("");
-
+  const [nombre, handleNombre] = React.useState("");
+  const [telefono, handleTelefono] = React.useState("");
+  const [email, handleEmail] = React.useState("");
+  const [clave, handleClave] = React.useState("");
+  
 
   return (
     <SafeAreaView style={styles.container}>
@@ -37,14 +41,36 @@ export default function App() {
       <StatusBar style="auto" />
       <SafeAreaView style={[styles.container, styles.container2]}>
       <SafeAreaView  style={{backgroundColor: 'lightblue', flex: 5}}>
-      <Text>Ingrese condimentos</Text>
+      <Text > Para confirmar la compra ingresa los siguientes datos</Text>
+
         <TextInput
           style={styles.input}
-          placeholder="ingrese..."
-          onChangeText={handleHamburguesaFav}
-          value={hamburguesa}
+          placeholder="ingrese nombre..."
+          onChangeText={handleNombre}
+          value={nombre}
         />
-        <Text > Tu hamburguesa tiene: {hamburguesa}</Text>
+        <Text ></Text>
+        <TextInput
+          style={styles.input}
+          placeholder="ingrese Telefono..."
+          onChangeText={handleTelefono}
+          value={telefono}
+        />
+        <Text ></Text>
+        <TextInput
+          style={styles.input}
+          placeholder="ingrese Email..."
+          onChangeText={handleEmail}
+          value={email}
+        />
+        <Text ></Text>
+        <TextInput
+          style={styles.input}
+          placeholder="ingrese clave..."
+          onChangeText={handleClave}
+          value={clave}
+        />
+        <Text ></Text>
         </SafeAreaView>
       </SafeAreaView>
     </SafeAreaView>
